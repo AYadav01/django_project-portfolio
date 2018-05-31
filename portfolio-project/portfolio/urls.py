@@ -25,4 +25,5 @@ urlpatterns = [
     path('blog/', include('blog.urls')), #all the url concerning jobs
     #could re re-routed with like (blog/..). For jobs, we could
     #have done - path('job/', include(jobs.urls))
+    path('projects/', include('projects.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
