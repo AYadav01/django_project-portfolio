@@ -27,14 +27,26 @@
       <a class="nav-item nav-link active" href="{% url 'allprojects' %}">Projects</a>
       <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
       <a class="nav-item nav-link" href="{% static 'transcript.pdf' %}">Transcript</a>
-      <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
+      <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
     </div>
   </div>
 </nav>
     </header>
 
     <main role="main">
-     
+
+    <!-- adding textbox form here -->
+<form action="{% url 'count' %}">
+  
+  <div class="container center_div form-group text-center">
+    <h1 class="display-8"><label for="exampleFormControlTextarea1" class="text-center">Word Counter</label></h1>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="fulltext"></textarea>
+    <br/>
+    <input type="submit" value="Count & Check!"/>
+    
+  </div>
+
+</form>
 
     </main>
     

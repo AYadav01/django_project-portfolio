@@ -6,7 +6,6 @@ from .models import Job
 
 # Create your views here.
 def home(request):
-
 	#grap all job objects from database and convert them into python object
 	jobs = Job.objects #this will be the dictionary
 

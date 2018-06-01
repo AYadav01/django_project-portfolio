@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.allprojects, name='allprojects'), #homepage for blogs page
+    path('1/', views.count, name='count'),
 
 ] 
