@@ -22,7 +22,7 @@ import jobs.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', jobs.views.home, name='home'),
-    path('blog/', include('blog.urls')), #all the url concerning jobs
+    path('blog/', include('blog.urls')), #all the url concerning blogs
     #could re re-routed with like (blog/..). For jobs, we could
     #have done - path('job/', include(jobs.urls))
     path('projects/', include('projects.urls')),

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +15,7 @@
 
   <body>
     <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="{% url 'home' %}">Anil Yadav</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,21 +31,18 @@
   </div>
 </nav>
     </header>
+    <br/>
 
     <main role="main">
-
-    <!-- adding textbox form here -->
-<form action="{% url 'count' %}">
-  
-  <div class="container center_div form-group text-center">
-    <h1 class="display-8"><label for="exampleFormControlTextarea1" class="text-center">Word Counter</label></h1>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="fulltext"></textarea>
-    <br/>
-    <input type="submit" value="Count & Check!"/>
-    
-  </div>
-
-</form>
+      <!--adding list of projects -->
+    <div class="list-group mx-auto" style="width: 60%;">
+  <a href="{% url 'wordcounter' %}" class="list-group-item list-group-item-action flex-column">
+    <div class="d-flex w-100 justify-content-between text-center">
+      <h5 class="mb-1">Word Counter</h5>
+    </div>
+    <p class="mb-1">The app allows you to enter any text and will return you the number of words entered, and the occurence of each word</p>
+  </a>
+</div>
 
     </main>
     
