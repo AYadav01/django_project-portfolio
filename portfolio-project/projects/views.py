@@ -22,3 +22,28 @@ def count(request):
 	sortedWords = sorted(myDict.items(), key=operator.itemgetter(1), reverse=True)
 	return render(request, 'projects/count.html', {'fulltext': fulltext, 'count': len(wordList),
 		'myDict':sortedWords})
+
+def htmlTag(request):
+	return render(request, 'projects/second_project.html')
+
+def htmlTagFinder(request):
+	import urllib.request
+	import re
+	#get the contents first
+	urls = request.GET['urls']
+	if urls.startswith('https://'):
+		pass
+	else:
+		urls = 'https://'+str(urls)
+	#extracting the html contents
+	with urllib.request.urlopen(urls) as file:
+		contents = file.read()
+	pattern = re.compile(r'<[a-zA-Z0-9\s=""\.-]+>')
+	matches = pattern.finditer(str(contents))
+	array = [] #for storing tags
+	for match in matches:
+		index = match.span()
+		array.append(str(contents)[index[0]:index[1]])
+	#return the template and tags
+	return render(request, 'projects/tagFinder.html', {'array':array,'url':urls})
+
