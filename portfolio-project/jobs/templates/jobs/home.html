@@ -23,7 +23,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
+    <div class="navbar-nav ml-auto float-right">
       <a class="nav-item nav-link" href="https://github.com/AYadav01">Github</a>
       <a class="nav-item nav-link" href="http://www.facebook.com/nili.yadav.007">Facebook</a>
       <a class="nav-item nav-link" href="{% url 'allprojects' %}">Projects</a>
@@ -46,15 +46,14 @@
           </p>
           <!-- this section holds the linkedin badge-->
           <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="anil-yadav-01"><a class="LI-simple-link" href='https://www.linkedin.com/in/anil-yadav-01?trk=profile-badge' target="_blank">Anil Yadav</a></div>
-
           <!--
           <img class="img-responsive py-3"src="{% static 'pp.jpg' %}"height="300"/> -->
+
         </div>
-  
       </section>
+        <h2 class="text-center shadow-lg p-4 mb-4 bg-white">Experiences</h2>
       <div class="album py-5 bg-light">
         <div class="container">
-
           <div class="row">
             {% for job in jobs.all %}
             <div class="col-md-4">
@@ -72,8 +71,8 @@
           </div>
         </div>
       </div>
-
     </main>
+
     <footer class="text-muted">
       <div class="container text-center">
        <p>&copy Anil Yadav {% now 'Y' %} </p>
