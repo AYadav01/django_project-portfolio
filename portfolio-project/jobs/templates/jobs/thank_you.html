@@ -36,41 +36,11 @@
     </header>
 
     <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Hi, I am Anil</h1>
-          <p class="lead text-muted">I am glad you are on my website. I love making python projects and am currently working on my personal website with Django ! Feel free to check out my resume, transcript or my blog posts :-) </p>
-          <p>
-            <!-- to load default mail app to send email, we can do 
-              <a href="mailto:ayadav01@student.coppin.edu"-->
-            <a href="{% url 'suggest' %}" class="btn btn-primary my-2">Get in touch!</a>
-          </p>
-          
-          <img class="img-responsive py-3"src="{% static 'pp.jpg' %}"height="300"/>
-
-        </div>
-      </section>
-        <h2 class="text-center shadow-lg p-4 mb-4 bg-white">Experiences</h2>
-      <div class="album py-5 bg-light">
-        <div class="container">
-          <div class="row">
-            {% for job in jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url }}"/>
-                <div class="card-body">
-                  <p class="card-text">{{ job.summary }}</p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-            </div>
-          
-            </div>
-          </div>
-        </div>
-      </div>
+      <br>
+      <blockquote class="blockquote">
+  <h1 class="display-4"><p class="mb-0 text-center">Thank you {{ name }}!</p></h1>
+  <footer class="blockquote-footer text-center">Anil Yadav</footer>
+</blockquote>
     </main>
 
     <footer class="text-muted">

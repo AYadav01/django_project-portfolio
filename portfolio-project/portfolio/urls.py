@@ -26,4 +26,5 @@ urlpatterns = [
     #could re re-routed with like (blog/..). For jobs, we could
     #have done - path('job/', include(jobs.urls))
     path('projects/', include('projects.urls')),
+    path('suggest_me/', jobs.views.suggest_me, name='suggest')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

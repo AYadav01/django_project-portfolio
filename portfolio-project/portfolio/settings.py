@@ -124,3 +124,10 @@ try:
 except ImportError:
     pass
     
+#setting for emails
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mail2the1brj007@gmail.com'
+EMAIL_HOST_PASSWORD = 'Ganesha15'
+EMAIL_PORT = 587
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
